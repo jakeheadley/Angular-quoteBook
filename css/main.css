@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Noticia+Text:400i|Raleway');
+body {
+  background: #efefef;
+}
+
+.main-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 30px 50px;
+  background: #FFF;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 2px 5px 5px #e8e8e9;
+  box-shadow: 0px 2px 5px 5px #e8e8e9;
+}
+
+.header-header {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.1vw;
+  color: #999;
+}
+
+.new-quotes {
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.quote-input {
+  width: 38%;
+  padding: 15px;
+  border-radius: 3px;
+  border: none;
+  font-size: 14px;
+  display: inline-block;
+  background: #efefef;
+}
+
+.add-quote-button {
+  width: 20%;
+  padding: 15px;
+  border-radius: 3px;
+  background:#7e9fe5;
+  border: none;
+  display: inline-block;
+  font-size: 14px;
+  color: #FFF;
+}
+
+.add-quote-button:hover {
+  background: #6c8fd9;
+}
+
+.quote-box {
+  max-width: 100%;
+  border-top: 1px solid #efefef;
+  margin-top: 20px;
+}
+
+.quote-text {
+  font-family: 'Noticia Text', serif;
+  font-size: 2.5vw;
+  line-height: 45px;
+  margin: 5px 0 10px 0;
+  color: #666;
+}
+
+.author-text {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.1vw;
+  color: #999;
+  text-align: right;
+}
+
+.fade.ng-enter {
+  transition: 1s ease-in all;
+  opacity:0;
+}
+.fade.ng-enter.ng-enter-active {
+  opacity:1;
+}

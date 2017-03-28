@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="quoteBooks">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,10 +9,31 @@
     <link rel="stylesheet" href="./css/main.css">
     <title>Angular Quote Book</title>
   </head>
-  <body>
+  <body ng-controller="MainController">
+  <!-- <div><strong>Operational:</strong> {{everythingIsBroken}}</div> -->
+  <main role="main" class="main-container">
 
+    <!-- Start: New Quotes -->
+    <h1 class="header-header">Enter a new quote to the list</h1>
+    <div class="new-quotes">
+      <input ng-model="newQuote" class="quote-input" placeholder="Enter quote here">
+      <input ng-model="newAuthor" class="quote-input" placeholder="Enter author here">
+      <button ng-click="addQuote(newQuote, newAuthor)" class="add-quote-button">Add Quote</button>
+    </div>
+    <!-- End: New Quotes -->
+
+    <!-- Start: Exsisting Quotes -->
+    <div ng-repeat="quote in quotesArr" class="quote-box fade">
+      <h2 class="quote-text">&ldquo;{{quote.text}}&rdquo;</h2>
+      <p class="author-text">~ {{quote.author}}</p>
+    </div>
+    <!-- End: Exsisting Quotes -->
+  </main>
+  <!-- Inclued Angular CDN and JS files  -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-animate.js"></script>
   <script src="./js/app.js"></script>
   <script src="./js/mainCtrl.js"></script>
+  <script src="./js/quoteService.js"></script>
   </body>
 </html>

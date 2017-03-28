@@ -1,1 +1,1 @@
-// App 
+angular.module('quoteBooks', ['ngAnimate'])
