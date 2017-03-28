@@ -7,21 +7,20 @@
     <link rel="stylesheet" href="./css/reset.css">
     <!-- Main CSS -->
     <link rel="stylesheet" href="./css/main.css">
-    <title>Angular Quote Book</title>
+    <title>Book Of Quotes (made with Angular JS)</title>
   </head>
   <body ng-controller="MainController">
+  <!-- Line 14 is just to check that the app is working, when setting up.  -->
   <!-- <div><strong>Operational:</strong> {{everythingIsBroken}}</div> -->
   <main role="main" class="main-container">
-
     <!-- Start: New Quotes -->
     <h1 class="header-header">Enter a new quote to the list</h1>
     <div class="new-quotes">
       <input ng-model="newQuote" class="quote-input" placeholder="Enter quote here">
-      <input ng-model="newAuthor" class="quote-input" placeholder="Enter author here">
+      <input ng-model="newAuthor" class="quote-input" ng-focus="" placeholder="Enter author here">
       <button ng-click="addQuote(newQuote, newAuthor)" class="add-quote-button">Add Quote</button>
     </div>
     <!-- End: New Quotes -->
-
     <!-- Start: Exsisting Quotes -->
     <div ng-repeat="quote in quotesArr" class="quote-box fade">
       <h2 class="quote-text">&ldquo;{{quote.text}}&rdquo;</h2>

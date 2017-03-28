@@ -5,7 +5,7 @@ body {
 
 .main-container {
   max-width: 1000px;
-  margin: 50px auto;
+  margin: 20px auto;
   padding: 30px 50px;
   background: #FFF;
   border-radius: 3px;
@@ -79,4 +79,9 @@ body {
 }
 .fade.ng-enter.ng-enter-active {
   opacity:1;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: opacity 0.1s 0.1s ease;
+  opacity: 0;
 }
